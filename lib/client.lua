@@ -129,6 +129,9 @@ RegisterNetEvent('ry-dumpster:exit', function()
     DeleteEntity(lidRight)
     spawnDumpsterSaved()
     isInDumpster = false
+
+    -- Restores the camera for default mode after leaving the dumpster
+    SetFollowPedCamViewMode(1)
 end)
 
 function spawnDumpsterSaved()
